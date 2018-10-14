@@ -1,4 +1,4 @@
-package com.example.ma.demomvp.screen.Category.View;
+package com.example.ma.demomvp.screen.Login.View;
 
 import android.content.Context;
 import android.content.Intent;
@@ -11,7 +11,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.ma.demomvp.R;
-import com.example.ma.demomvp.screen.Category.Presenter.LoginPresenterImp;
+import com.example.ma.demomvp.screen.Login.Presenter.LoginPresenterImp;
 
 public class LoginActivity extends AppCompatActivity implements LoginView,View.OnClickListener {
     private EditText mEditUserName, mEditPassWord;
