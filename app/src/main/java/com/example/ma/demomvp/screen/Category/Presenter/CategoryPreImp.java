@@ -1,0 +1,25 @@
+package com.example.ma.demomvp.screen.Category.Presenter;
+
+import com.example.ma.demomvp.data.model.CategoryImage;
+import com.example.ma.demomvp.data.repository.HomeRepository;
+import com.example.ma.demomvp.data.source.CallBack;
+import com.example.ma.demomvp.screen.Category.View.Category;
+import com.example.ma.demomvp.screen.Category.View.CategoryView;
+
+import java.util.ArrayList;
+
+public class CategoryPreImp implements CategoryPresenter {
+    private CategoryView mCategory;
+    public CategoryPreImp(CategoryView categoryView){
+        this.mCategory = categoryView;
+    }
+    @Override
+    public void getCategoryList(HomeRepository homeRepository) {
+        homeRepository.getCategory(new CallBack<ArrayList<CategoryImage>>() {
+            @Override
+            public void getDataSuccess(ArrayList<CategoryImage> data) {
+                mCategory.showCategory(data);
+            }
+        });
+    }
+}
