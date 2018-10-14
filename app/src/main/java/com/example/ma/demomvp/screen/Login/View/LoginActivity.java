@@ -11,6 +11,7 @@ import android.widget.ProgressBar;
 import android.widget.Toast;
 
 import com.example.ma.demomvp.R;
+import com.example.ma.demomvp.screen.Category.View.Category;
 import com.example.ma.demomvp.screen.Login.Presenter.LoginPresenterImp;
 
 public class LoginActivity extends AppCompatActivity implements LoginView,View.OnClickListener {
@@ -48,7 +49,7 @@ public class LoginActivity extends AppCompatActivity implements LoginView,View.O
 
     @Override
     public void navigateCategory() {
-        startActivity(new Intent());
+        startActivity(new Intent(this,Category.class));
     }
 
     @Override
