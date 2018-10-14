@@ -15,7 +15,7 @@ public class HomeRepository implements RemoteDataSource {
         return mInstance;
     }
     @Override
-    public void getPlayList(CallBack<ArrayList<CategoryImage>> callback) {
+    public void getCategory(CallBack<ArrayList<CategoryImage>> callback) {
         new FetchDataFromApi.ContentCategory(callback).execute(MyKey.URL);
     }
 }
