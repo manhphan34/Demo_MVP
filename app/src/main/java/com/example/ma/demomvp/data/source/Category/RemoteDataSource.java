@@ -7,5 +7,5 @@ import com.example.ma.demomvp.data.source.CallBack;
 import java.util.ArrayList;
 
 public interface RemoteDataSource {
-    void getPlayList(CallBack<ArrayList<CategoryImage>> callback);
+    void getCategory(CallBack<ArrayList<CategoryImage>> callback);
 }
